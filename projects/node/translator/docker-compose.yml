@@ -1,0 +1,42 @@
+version: '3.3'
+services:
+  rabbit:
+    image: "rabbitmq:3-management"
+    container_name: rabbit
+    ports:
+      - 5672:5672
+      - 6152:15672 
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+      - RABBITMQ_DEFAULT_VHOST=contenthub
+
+  leibniz:
+    build: . 
+    image: "reg.igeg.com.br/leibniz"
+    container_name: leibniz
+    ports:
+     - 4000:4000
+     - 9229:9229
+    volumes:
+     - .:/leibniz
+    tty: true
+    stdin_open: true
+    depends_on:
+      - rabbit
+    links: 
+      - rabbit:rabbit
+    environment:
+      - NODE_ENV=development
+      - BROKER_USER=guest
+      - BROKER_PASS=guest
+      - BROKER_HOST=rabbit
+      - BROKER_VHOST=contenthub
+      - QUEUE_CONSUME=globocore
+      - QUEUE_PUBLISH=ondemand
+      - EXCHANGE_CONSUME=leibniz-qa
+      - EXCHANGE_PUBLISH=content-hub
+      - LIMIT_RETRY_PUBLISH=5 
+      - TIME_RETRY_PUBLISH=3000 
+      - LOG_LEVEL=debug
+    command: npm run dev

@@ -1,0 +1,50 @@
+<div class="form">
+
+        <app-pageheader title="Adicionar tarefa"></app-pageheader>
+        
+        <form [formGroup]="postForm" (submit)="save($event)" #formAdd="ngForm" >
+            <div class="form-row">
+                <label htmlFor="">Title</label>
+                <input  
+                    type="text"  
+                    placeholder="Title" 
+                    autoComplete="off" 
+                    name="title" 
+                    formControlName="title" 
+                    class="title"
+                />
+                <div *ngIf=" postForm.controls.description.invalid" class="validation-box">
+                    <span class="error-tip" *ngIf="postForm.get('title').errors?.required" >
+                        Título obrigatório
+                    </span>
+                    <span class="error-tip" *ngIf="postForm.get('title').errors?.minlength">
+                        Título deve ter no mínimo 4 caracteres
+                    </span>                    
+                </div> 
+            </div>
+            <div class="form-row">
+                <label htmlFor="">Description</label>
+                <textarea  
+                    placeholder="Description"
+                    name="description"
+                    formControlName="description"
+                    class="description"
+                >
+                </textarea>
+                <div *ngIf="postForm.controls.description.invalid" class="validation-box">
+                    <span class="error-tip" *ngIf="postForm.controls.description.errors.required" >
+                        Descrição obrigatório
+                    </span>                  
+                </div>
+            </div>
+            <div class="form-row"> 
+                <button 
+                    [disabled]="postForm.invalid"  
+                    class="btn-primary" 
+                    type="submit"
+                >
+                Enviar
+                </button>
+            </div> 
+        </form>  
+</div>

@@ -1,0 +1,66 @@
+/*
+|--------------------------------------------------------------------------
+| Paths
+|--------------------------------------------------------------------------
+*/
+
+$path-image:  '../images';
+$path-font:   '../fonts';
+
+/*
+|--------------------------------------------------------------------------
+| Main Container Width
+|--------------------------------------------------------------------------
+*/
+
+$main-width:  1170px; 
+
+/*
+|--------------------------------------------------------------------------
+| Colors
+|--------------------------------------------------------------------------
+*/
+
+// Background
+
+$color_bg:			 #fff;
+
+// Texts and Links
+
+$color-text:		 #555555;
+$color-title:		 #555555;
+$color-subtitle:	 #555555;
+$color-link: 		 #66afe9;
+
+// Selection
+
+$selection-bg: 	 	 #7cbbec;
+$selection-color:    #555555;
+
+
+/*
+|--------------------------------------------------------------------------
+| Fonts
+|--------------------------------------------------------------------------
+*/
+
+$font-main : 	  'OpenSansRegular';
+$font-regular:    'OpenSansRegular';
+$font-bold: 	  'OpenSansRegular';
+$font-light: 	  'OpenSansRegular';
+
+/*
+|--------------------------------------------------------------------------
+| Media Queries
+|--------------------------------------------------------------------------
+*/
+
+// Usage example:  @media #{$media-tablet}
+
+$media-desk: 		        "only screen and (max-width: 1170px)";
+$media-tablet-land: 	    "only screen and (max-width: 960px)";
+$media-tablet: 		        "only screen and (max-width: 770px)";
+$media-mobile-land: 	    "only screen and (max-width: 640px)";
+$media-mobile: 		        "only screen and (max-width: 480px)";
+
+

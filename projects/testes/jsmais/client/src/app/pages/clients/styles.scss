@@ -1,0 +1,27 @@
+
+table{
+    width: 100%;
+}
+
+tr{
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+td{
+    width:75%;
+    padding: 15px 10px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+    text-transform: capitalize;
+
+    &:first-child{
+        width:25%;
+        font-weight: bold;
+    }
+}
+
+.no-cap{
+    text-transform: lowercase;
+}
+

@@ -1,0 +1,38 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<section class="content">
+        <div class="container">
+
+          <!-- Title -->
+
+          <div class="section">
+                <h5 class="grey-text darken-4">{{ title }}</h5>
+          </div>
+
+          <!-- List -->
+
+            <div class="row">
+                {% for post in posts %}
+                <div class="col s12 m6">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images.png" alt=""/>
+                    </div>
+                    <div class="card-content">
+                      <b class="card-category">{{ post.category }}</b>
+                      <span class="card-title blue-text ">{{ post.title }}</span>
+                      <p>{{ post.description }}</p>
+                    </div>
+                    <div class="card-action">
+                      <a class="blue-text darken-2" href="http://localhost:5000/post/{{ post.id }}">Ver Mais</a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+</section>
+
+
+{% endblock %}

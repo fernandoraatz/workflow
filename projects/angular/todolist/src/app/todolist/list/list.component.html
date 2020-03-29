@@ -1,0 +1,32 @@
+
+      <app-pageheader title="Listar tarefas"></app-pageheader>
+      <!-- <app-search [searchEngine]="searchEngine"></app-search> -->
+
+    <div class="search-box">
+        <div class="container">
+            <input  [(ngModel)]="inputValue"   type="search" class="form-field_medium"  placeholder="Pesquisar Tarefas" />
+        </div>
+    </div>    
+
+      <div class="list-box">
+          <article *ngFor="let item of itens | search: inputValue" >
+                
+            <div class="card {{item.isChecked ? 'done' : 'open'}} ">
+                <div class="card-title"> 
+                    <h2> {{item.title}}</h2>
+                </div>
+                <div class="card-content">
+                    {{item.description}} 
+                </div>
+                <div class="card-actions" > 
+                    <app-button [callback]="deleteData" icon="clear" [id]="item.id"></app-button>
+                    <a [routerLink]="['/add', item.id]">
+                        <app-button [callback]="editData" icon="edit"></app-button> 
+                        </a>
+                    <app-button [callback]="checkData" [id]="item.id"
+                    [icon]="item.isChecked ? 'check_box' : 'check_box_outline_blank'">
+                    </app-button>
+                </div>  
+            </div> 
+        </article>
+      </div>

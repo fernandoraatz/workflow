@@ -1,0 +1,78 @@
+/*
+|--------------------------------------------------------------------------
+| Buttons
+|--------------------------------------------------------------------------
+*/
+
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: em(14);  
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color:#fff;
+    transition: all ease 0.4s; 
+    font-family:$font-bold; 
+}
+
+/*
+|--------------------------------------------------------------------------
+| Buttons Theme
+|--------------------------------------------------------------------------
+*/
+
+// Colors
+
+$btn-default: 		 #ffffff;
+$btn-primary: 		 #337ab7;
+$btn-success:		 #5cb85c;
+$btn-danger:		 #d9534f;
+
+// Button Class
+
+$btn-colors:(
+    theme:          $btn-default,
+    primary:        $btn-primary,
+    success:        $btn-success,
+    danger:         $btn-danger
+);
+
+@each $index, $value in $btn-colors{
+    .btn-#{$index}{
+        background-color: $value;
+
+        &:hover, a:focus {
+            background-color: darken($value, 10%);
+        }
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Classe dos botões
+|--------------------------------------------------------------------------
+*/
+
+.btn-default{
+    @extend .btn;
+    @extend .btn-default;
+}
+
+.btn-primary{
+    @extend .btn;
+    @extend .btn-primary;
+}
+
+.btn-success{
+    @extend .btn;
+    @extend .btn-success;
+}
+
+.btn-danger{
+    @extend .btn;
+    @extend .btn-danger;
+}

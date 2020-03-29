@@ -1,0 +1,38 @@
+
+  <app-pageheader title="Pokemon Detail"></app-pageheader>  
+
+  <section class="list-box">
+    <article>
+        <div class="card">
+            <div class="card-thumb">
+                <img src="//serebii.net/sunmoon/pokemon/{{pokemonNumber | PokeNumber}}.png"  />
+            </div>
+            <div class="card-content"> 
+                    <h2 class="card-title">{{pokemon.name}}</h2>
+
+                    <ul>
+                        <li>
+                            <b>Abilities: </b>
+                            <span *ngFor="let abilities of pokemon.abilities">
+                                {{abilities.ability.name}} - 
+                            </span>
+                        </li>
+                        <li>
+                            <b>Types: </b>
+                            <span *ngFor="let types of pokemon.types">
+                                {{types.type.name}} - 
+                            </span>
+                        </li>
+                        <li>
+                                <b>Moves: </b>
+                                <span *ngFor="let moves of pokemon.moves">
+                                    {{moves.move.name}} - 
+                                </span>
+                            </li>
+                    </ul>
+                    
+                    
+            </div>
+      </div>
+    </article>
+  </section>

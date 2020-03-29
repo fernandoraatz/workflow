@@ -1,0 +1,101 @@
+/*
+|--------------------------------------------------------------------------
+| Form Fields e Row
+|--------------------------------------------------------------------------
+*/
+
+
+.form-row {
+   margin: 10px 0;
+   @extend .clearfix;
+}
+
+.input-full   { @extend .grid-12; }
+.input-large  { @extend .grid-8; }
+.input-medium { @extend .grid-6; }
+.input-small  { @extend .grid-4; }
+
+/*
+|--------------------------------------------------------------------------
+| Inputs
+|--------------------------------------------------------------------------
+*/
+
+// Variables
+
+$input-bg:			 #ffffff;
+$input-border:		 #cccccc;
+$input-focus:		 #66afe9;
+$input-color:		 #555555;
+
+textarea, select, input[type="text"], input[type="password"], input[type="search"]{
+    width:100%;
+    height:40px;
+    padding-left: 10px;
+    background-color: $input-bg;
+    border: 1px solid $input-border;
+    transition: border linear .2s, box-shadow linear .2s;
+
+      &:focus{
+          border-color: $input-border;
+          outline: 0;
+          outline: thin dotted \9;
+          box-shadow: 0 0 2px $input-focus;
+      }
+}
+
+textarea{
+  min-height:150px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Label and Errors
+|--------------------------------------------------------------------------
+*/
+
+label{
+    display:block;
+    margin-bottom: 5px;
+    font-size: em(14);
+    font-weight: bold;
+
+    &.label-inline{
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+
+.error-tip{
+    color: #cc6d6d; 
+    font-size: em(13);
+    margin: 5px 0;
+    display: block;
+} 
+
+
+/*
+|--------------------------------------------------------------------------
+| Placeholder
+|--------------------------------------------------------------------------
+*/
+
+
+input[type="text"]::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.6s linear;
+    color: $input-color;
+}
+
+input[type="text"]:focus::-webkit-input-placeholder {
+    opacity: 0
+}
+
+textarea::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.6s linear;
+    color: $input-color;
+}
+
+textarea:focus::-webkit-input-placeholder {
+    opacity: 0
+}

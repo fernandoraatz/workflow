@@ -1,0 +1,70 @@
+/*
+|--------------------------------------------------------------------------
+| List
+|--------------------------------------------------------------------------
+*/
+
+.list-box{
+    display:flex;
+    flex-wrap: wrap;
+    
+    article{
+      min-height: 165px;
+      margin-bottom:20px;
+      margin-right: 16px;
+    }
+  }
+  
+
+/*
+|--------------------------------------------------------------------------
+| Card
+|--------------------------------------------------------------------------
+*/
+
+.card{
+    background-color: #d65261;
+    color: white;
+    width:300px;
+    min-height: 145px;
+    padding:16px;  
+    position: relative;
+
+
+    &.done{
+      background-color: #4c8e4c;
+    }
+
+    .card-title{
+        font-size: 0.8em;
+        margin-bottom: 20px;
+    }
+    
+    .card-content{
+        font-size: 0.95em;
+    }
+    
+    .card-actions{ 
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Search
+|--------------------------------------------------------------------------
+*/
+
+.search-box{
+    margin-bottom:20px;
+ 
+      .container{
+        width:100%;
+      }
+    
+}
+  

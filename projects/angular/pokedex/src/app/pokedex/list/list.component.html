@@ -1,0 +1,29 @@
+
+<app-pageheader title="List All Pokemons"></app-pageheader>
+
+<section class="search-box">
+    <div class="container">
+        <input  [(ngModel)]="nameFilter"   type="search" class="form-field_medium"  placeholder="Pesquisar Pokemon" />
+    </div>
+</section>    
+
+<section class="list-box">
+    <article *ngFor="let pokemon of pokemonList | search: nameFilter">
+        
+            <div class="card">
+                    <div class="card-thumb">
+                        <img src="//serebii.net/xy/pokemon/{{ pokemon.number | PokeNumber }}.png" >
+                       
+                    </div>
+                    <div class="card-content"> 
+                            <h2 class="card-title">{{pokemon.name}}</h2>
+                        
+                    </div>
+                    <div class="card-action"> 
+                        <a class="btn-primary" href="pokemon/{{pokemon.number | PokeNumber}}">Detalhes</a>
+                    </div>
+            </div>
+         
+    </article> 
+</section>
+

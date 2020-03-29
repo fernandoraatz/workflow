@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+	<!-- Meta-Tags-->
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no" name="viewport" />
+
+	<!-- Título -->
+
+	<title>Todo List</title>
+
+</head>
+
+<body>
+
+  <!-- Container -->
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <!-- Header -->
+
+      <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+              <span class="mdl-layout-title">Todo List</span>
+          </div>
+      </header>
+
+      <!-- Aside Menu -->
+
+      <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">Todo List</span>
+          <nav class="mdl-navigation">
+              <a class="mdl-navigation__link menu-aside-item" data-action="newItem">New Item</a>
+              <a class="mdl-navigation__link menu-aside-item" data-action="checkAll">Check All</a>
+              <a class="mdl-navigation__link menu-aside-item" data-action="uncheckAll">Uncheck All</a>
+              <a class="mdl-navigation__link menu-aside-item" data-action="clearAll">Clear All</a>
+          </nav>
+      </div>
+
+      <!-- Main Content -->
+
+      <main class="mdl-layout__content">
+          <div class="page-content">
+              <ul class="todo-list" ></ul>
+          </div>
+      </main>
+
+
+  </div>
+
+  <!-- Dialog Box / Edit -->
+
+  <dialog class="mdl-dialog" id="item-dialog">
+      <div class="mdl-dialog__content">
+          <img src="" id="item-dialog-picture" width="230" height="200"/>
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect open-camera" data-action="startCamera">
+              <i class="material-icons">camera_alt</i>
+          </button>
+          <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="title" maxlength="30" placeholder="Title">
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <textarea class="mdl-textfield__input" id="description" maxlength="100" rows="4" placeholder="Description"></textarea>
+              </div>
+          </form>
+      </div>
+      <div class="mdl-dialog__actions">
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect close">
+              <i class="material-icons">close</i>
+          </button>
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect add" data-action="save">
+              Salvar
+          </button>
+      </div>
+  </dialog>
+
+  <!-- Dialog Box / Camera -->
+
+  <dialog class="mdl-dialog" id="camera-dialog">
+      <div class="mdl-dialog__content">
+          <video id="camera-tag" width="230" height="200" autoplay ></video>
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect shoot" data-action="shoot">
+              <i class="material-icons">camera_alt</i>
+          </button>
+      </div>
+      <div class="mdl-dialog__actions">
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect close">
+              <i class="material-icons">close</i>
+          </button>
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect shoot" data-action="changeSource">
+              <i class="material-icons">switch_camera</i>
+          </button>
+      </div>
+  </dialog>
+
+	</body>
+</html>

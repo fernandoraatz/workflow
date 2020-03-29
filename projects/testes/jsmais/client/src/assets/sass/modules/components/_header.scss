@@ -1,0 +1,57 @@
+/*
+|--------------------------------------------------------------------------
+| Header
+|--------------------------------------------------------------------------
+*/
+
+// Header
+
+header{
+    background-color: #525252;
+    height:100px;
+
+    .logo{
+        width:25%;
+        float:left;
+
+        @media #{$media-tablet}{
+            width:100%;
+        }
+
+        span{
+            display: block;
+            width: 150px;
+            margin: 12px auto;
+
+        }
+        
+    }
+
+    .menu{
+        width:75%;
+        float:left;
+        text-align: right;
+        padding: 39px 0;
+
+        li{
+            display:inline-block;
+            padding: 0 0 0 55px;
+            font-weight: bold;
+            margin-right: 1px;
+            text-align: center;
+
+            a{
+                color:#fff;
+                transition: all ease 0.4s;
+
+                &:hover{
+                    color:#7cbbec;
+                }
+            }
+        }
+
+        @media #{$media-tablet}{
+            display:none;
+        }
+    }
+}

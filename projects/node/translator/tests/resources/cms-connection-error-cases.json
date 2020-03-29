@@ -1,0 +1,22 @@
+{
+    "list": [
+        {
+            "title": "connection timeout",
+            "errorCode": "ETIMEDOUT",
+            "expectedStatus": 504,
+            "expectedMessage": "Gateway Timeout!"
+        },
+        {
+            "title": "connection refused",
+            "errorCode": "ECONNREFUSED",
+            "expectedStatus": 500,
+            "expectedMessage": "Internal Server Error!"
+        },
+        {
+            "title": "connection reset",
+            "errorCode": "ECONNRESET",
+            "expectedStatus": 500,
+            "expectedMessage": "Internal Server Error!"
+        }
+    ]
+}

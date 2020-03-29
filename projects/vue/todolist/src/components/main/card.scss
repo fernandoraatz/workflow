@@ -1,0 +1,130 @@
+/*
+|--------------------------------------------------------------------------
+| Page Title
+|--------------------------------------------------------------------------
+*/
+
+.page-title{
+    border-bottom: 1px solid silver;
+    margin-bottom: 20px;
+    font-size: 0.7em;
+    padding: 10px 0;
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Card
+|--------------------------------------------------------------------------
+*/
+
+// .card{
+//     background-color: #24a777;
+//     color: white;
+//     width:22%;
+//     min-height: 145px;
+//     float: left;
+//     margin-right:2%;
+//     padding:16px;
+//     position: relative;
+//     margin-bottom: 2%;
+
+
+// .card-title{
+//     font-size: 0.8em;
+//     margin-bottom: 20px;
+// }
+
+// .card-content{
+//     font-size: 0.95em;
+// }
+
+// .card-actions{ 
+//     position: absolute;
+//     top: 16px;
+//     right: 16px;
+
+//     button{
+//         background: 0 0;
+//         color:#fff;
+//         border: none;
+//         padding: 0 5px;
+//         transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+//         outline: none;
+//         cursor: pointer;
+ 
+//     }
+// }
+// }
+
+
+/*
+|--------------------------------------------------------------------------
+| List
+|--------------------------------------------------------------------------
+*/
+
+.list-box{
+    display:flex;
+    flex-wrap: wrap;
+    
+    article{
+      min-height: 165px;
+      margin-bottom:20px;
+      margin-right: 16px;
+    }
+  }
+  
+
+/*
+|--------------------------------------------------------------------------
+| Card
+|--------------------------------------------------------------------------
+*/
+
+.card{
+    background-color: #24a777;
+    color: white;
+    width:300px;
+    min-height: 145px;
+    padding:16px;  
+    position: relative;
+
+
+    &.done{
+      background-color: #4c8e4c;
+    }
+
+    .card-title{
+        font-size: 0.8em;
+        margin-bottom: 20px;
+    }
+    
+    .card-content{
+        font-size: 0.95em;
+    }
+    
+    .card-actions{ 
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Search
+|--------------------------------------------------------------------------
+*/
+
+.search-box{
+    margin-bottom:20px;
+ 
+      .container{
+        width:100%;
+      }
+    
+}
+  

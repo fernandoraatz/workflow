@@ -1,0 +1,96 @@
+/* fallback */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v39/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /*
+|--------------------------------------------------------------------------
+| Style
+|--------------------------------------------------------------------------
+*/
+
+  .todo-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .todo-list-item{
+    list-style-type: none;
+    margin: 10px;
+  }
+  
+  .card-content-container{
+    background-color: rgba(181, 55, 16, 0.79);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .card-content-container.check_box{
+    background-color: blue;
+  }
+  
+  .todo-list-item .mdl-card{
+    background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 145px;
+      position: relative;
+  }
+  
+  .todo-list-item .mdl-card__title-text{
+    font-size: 18px;
+      font-weight: bold;
+      max-width: 195px;
+  }
+  
+  
+  .todo-list-item .mdl-card__title{
+    margin-bottom: 0;
+  }
+  
+  .todo-list-item .mdl-card__title, .todo-list-item .mdl-card__supporting-text{
+    color: white;
+    word-wrap: break-word;
+  }
+  
+  .todo-list-item .mdl-card__menu{
+    color: white;
+  }
+  
+  #camera-dialog{
+    text-align: center;
+  }
+  
+  #camera-tag, #item-dialog-picture{
+    width: 100%;
+  }
+  
+  #item-dialog-picture[src='']{
+    display: none;
+  }
+  

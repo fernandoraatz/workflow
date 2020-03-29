@@ -1,0 +1,70 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<!-- Content -->
+
+<section class="content">
+  <div class="container">
+
+    <!-- Title -->
+
+    <div class="section">
+          <h5 class="grey-text darken-4">Cadastro</h5>
+    </div>
+
+    <!-- Form -->
+
+  <div class="section">
+      <div class="row">
+        
+        <form action="{{ url_for('save') }}" method="post" enctype="multipart/form-data" class="col s12">
+
+            <div class="input-field col s6">
+              <input type="text" id="title" name="title" placeholder=""  value=""/>
+              <label for="titulo">Título</label>
+            </div>
+
+            <div class="input-field col s6">
+              <input type="text" id="category" name="category" placeholder="" value="" />
+              <label for="category">Categoria</label>
+            </div>
+
+            <div class="input-field col s12">
+              <textarea id="description" name="description" class="materialize-textarea"></textarea>
+              <label for="description">Descrição</label> 
+            </div>
+
+            <div class="col s2"> 
+              <figure class="thumb col-md-4">
+                  <img class="img-responsive" src="{{ url_for('getImage', file_name='imagem_padrao.jpg') }}">
+                  <figcaption>
+                      <label class="fileContainer">
+                          Mudar imagem
+                          <input type="file" name="image">
+                      </label>
+                  </figcaption>
+              </figure>
+           </div> 
+
+            <button class="btn waves-effect waves-light right" type="submit">Enviar
+              <i class="material-icons right">send</i>
+            </button>
+        </form>
+        </div>
+
+      </div>
+
+  <div class="divider"></div>
+
+    <!-- Links -->
+
+  <div class="section">
+    <div class="row">
+        <a class="btn waves-effect waves-light " href="{{ url_for('renderIndex') }}">Voltar<i class="material-icons right">home</i></a>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+{% endblock %}

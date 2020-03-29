@@ -1,0 +1,50 @@
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+footer{
+    background: #353535;
+    text-align: center;
+    height:280px;
+    padding-top:26px;
+    color:#fff;
+
+
+    .logo{
+        display: block;
+        width: 175px;
+        margin: 0 auto 0 auto;
+    }
+
+    .copyright{
+        margin-top: 10px;
+        font-size: 0.85em;
+        margin-bottom: 25px;
+    }
+
+    .social{
+
+       span{
+            font-size: 0.75em;
+       }
+
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 10px;
+
+            a{
+                color:#fff;
+                font-size: 1.1em;
+                transition: all ease 0.4s;
+
+                &:hover{
+                    color:#7cbbec;
+                }
+            }
+        }
+    }
+
+}

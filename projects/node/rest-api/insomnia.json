@@ -1,0 +1,173 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-02-04T20:32:51.835Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_79556dd829974f2d9bda51d04b98567b",
+			"created": 1548708989923,
+			"description": "",
+			"modified": 1548708989923,
+			"name": "Node API",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_a56f0ea164a74bdf81b61024e604c6e5",
+			"color": null,
+			"created": 1548708990007,
+			"data": {
+				"base_url": "http://localhost:5001/api"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1548708990007,
+			"modified": 1549311701594,
+			"name": "New Environment",
+			"parentId": "wrk_79556dd829974f2d9bda51d04b98567b",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_44ff111a2d3642cfa127d6cc20365b1a",
+			"cookies": [],
+			"created": 1548708990029,
+			"modified": 1548708990029,
+			"name": "Default Jar",
+			"parentId": "wrk_79556dd829974f2d9bda51d04b98567b",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_e4fcb34589124c37bfaf5eac16abe327",
+			"authentication": {},
+			"body": {},
+			"created": 1548709013261,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1548709013261,
+			"method": "GET",
+			"modified": 1549311712322,
+			"name": "List",
+			"parameters": [],
+			"parentId": "wrk_79556dd829974f2d9bda51d04b98567b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/products",
+			"_type": "request"
+		},
+		{
+			"_id": "req_6e48bff05e324959973823da5d43158f",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "  {\n    \"title\": \"Produto 1\",\n    \"description\": \"Lorem Ipsum ...\",\n    \"url\": \"http://produto\"\n }"
+			},
+			"created": 1548709204416,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_80f3e2bb3d504e10ba97a99e4a545a5b",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1548709204416,
+			"method": "POST",
+			"modified": 1549311951017,
+			"name": "Save",
+			"parameters": [],
+			"parentId": "wrk_79556dd829974f2d9bda51d04b98567b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/products",
+			"_type": "request"
+		},
+		{
+			"_id": "req_4429c9d4392d454abc70a76f18d5575d",
+			"authentication": {},
+			"body": {},
+			"created": 1549312004689,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1549312004689,
+			"method": "GET",
+			"modified": 1549312175624,
+			"name": "Get By Id",
+			"parameters": [],
+			"parentId": "wrk_79556dd829974f2d9bda51d04b98567b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/products/5c58a0a67bf15f268301f542",
+			"_type": "request"
+		},
+		{
+			"_id": "req_bc97989594ea4506a14fd40cd45ecf04",
+			"authentication": {},
+			"body": {},
+			"created": 1549312223528,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1549312223528,
+			"method": "DELETE",
+			"modified": 1549312234974,
+			"name": "Delete",
+			"parameters": [],
+			"parentId": "wrk_79556dd829974f2d9bda51d04b98567b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/products/5c58a0a67bf15f268301f542",
+			"_type": "request"
+		},
+		{
+			"_id": "req_946c7dc856754950b9da2d2aa9914795",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "  {\n    \"title\": \"Produto update\",\n    \"description\": \"Lorem Ipsum ...\",\n    \"url\": \"http://produto\"\n }"
+			},
+			"created": 1549312254855,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_ecec284a3878491caa85c7c10a237b42",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549312254855,
+			"method": "PUT",
+			"modified": 1549312302173,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "wrk_79556dd829974f2d9bda51d04b98567b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/products/5c58a0a67bf15f268301f542",
+			"_type": "request"
+		}
+	]
+}

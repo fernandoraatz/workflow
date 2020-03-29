@@ -1,0 +1,39 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<section class="content">
+        <div class="container">
+
+          <!-- Title -->
+
+          <div class="section">
+                <h5 class="grey-text darken-4">{{ title }}</h5>
+          </div>
+
+          <!-- List -->
+
+            <div class="row">
+                <div class="col s12 ">
+                  <div class="card ">
+                    <div class="card-image col-4">
+                      <img src="{{ url_for('getImage', file_name=image) }}"alt=""/>
+                    </div>
+                    <div class="card-content">
+                      <b class="card-category">{{ post.category }}</b>
+                      <span class="card-title blue-text ">{{ post.title }}</span>
+                      <p>{{ post.description }}</p>
+                    </div>
+                    <div class="card-action">
+                        <div class="card-action">
+                                <a class="btn waves-effect waves-light blue" href="http://localhost:5000/admin/update/{{ post.id }}">Editar<i class="material-icons right">edit</i></a>
+                                <a class="btn waves-effect waves-light red btn-delete" href="http://localhost:5000/delete/{{ post.id }}">Deletar<i class="material-icons right">edit</i></a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+{% endblock %}

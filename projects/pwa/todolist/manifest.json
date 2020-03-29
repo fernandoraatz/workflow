@@ -1,0 +1,17 @@
+{
+  "name": "PWA ToDo",
+  "short_name": "PWA TD",
+  "theme_color": "#3f51b5",
+  "background_color": "#3f51b5",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "./images/to-do-list.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}
+ 

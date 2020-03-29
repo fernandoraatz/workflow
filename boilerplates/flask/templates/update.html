@@ -1,0 +1,71 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<!-- Content -->
+
+<section class="content">
+  <div class="container">
+
+    <!-- Title -->
+
+    <div class="section">
+          <h5 class="grey-text darken-4">{{title}} - {{post.id}}  </h5>
+    </div>
+
+    <!-- Form -->
+
+  <div class="section">
+      <div class="row"> 
+        <form action="{{ url_for('updatePost') }}" method="post" enctype="multipart/form-data">
+
+            <input type="hidden" name="id" value="{{ post.id }}">
+
+            <div class="input-field col s6">
+              <input type="text" id="title" name="title" placeholder=""  value="{{ post.title }}"/>
+              <label for="titulo">Título</label>
+            </div>
+
+            <div class="input-field col s6">
+              <input type="text" id="category" name="category" placeholder="" value="{{ post.category }}" />
+              <label for="category">Categoria</label>
+            </div>
+
+            <div class="input-field col s12">
+              <textarea id="description" name="description" class="materialize-textarea">{{ post.description }}</textarea>
+              <label for="description">Descrição</label>
+            </div>
+
+            <div class="col s2"> 
+                <figure class="thumb col-md-4">
+                     <img class="img-responsive" src="{{ url_for('getImage', file_name=image) }}"alt=""/>
+                    <figcaption>
+                        <label class="fileContainer">
+                            Mudar capa
+                            <input type="file" name="image" accept=".jpg">
+                        </label>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <button class="btn waves-effect waves-light right" type="submit">Enviar
+              <i class="material-icons right">send</i>
+            </button>
+        </form>
+        </div>
+
+      </div>
+
+  <div class="divider"></div>
+
+    <!-- Links -->
+
+    <div class="section">
+        <div class="row">
+            <a class="btn waves-effect waves-light " href="{{ url_for('renderIndex') }}">Voltar<i class="material-icons right">home</i></a>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+{% endblock %}

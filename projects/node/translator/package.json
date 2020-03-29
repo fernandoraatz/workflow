@@ -1,0 +1,45 @@
+{
+  "name": "@igeg/leibniz",
+  "version": "1.0.0",
+  "description": "Translates EdgCore Articles to the CHUPS Model",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "npm run deps && nodemon --inspect=0.0.0.0:9229 app.js",
+    "deps": "npm prune && npm install",
+    "setup": "cp ./config/app.yml.example ./config/app.yml",
+    "test": "BROKER_USER=guest BROKER_PASS=guest BROKER_HOST=192.168.1.2 QUEUE_CONSUME=globocore EXCHANGE_CONSUME=leibniz-qa EXCHANGE_PUBLISH=content-hub LIMIT_RETRY_PUBLISH=3 mocha tests --recursive",
+    "keeptesting": "BROKER_USER=guest BROKER_PASS=guest BROKER_HOST=192.168.1.2 QUEUE_CONSUME=globocore EXCHANGE_CONSUME=leibniz-qa EXCHANGE_PUBLISH=content-hub LIMIT_RETRY_PUBLISH=3 mocha tests --recursive --watch",
+    "coverage": "nyc npm run test",
+    "docs": "rm -r docs && ./node_modules/.bin/jsdoc app/ -r -d docs -R GettingStarted.md",
+    "lint": "eslint ."
+  },
+  "author": "Globocore",
+  "license": "ISC",
+  "dependencies": {
+    "@igeg/champollion": "2.0.3",
+    "@igeg/franklin": "2.0.0",
+    "amqplib": "^0.5.2",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-load": "^1.1.15",
+    "morgan": "^1.9.0",
+    "uuid": "latest",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^4.1.1",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.4.3",
+    "mocha": "^3.4.2",
+    "nock": "^9.0.13",
+    "nodemon": "^1.11.0",
+    "nyc": "^11.0.3",
+    "proxyquire": "^1.8.0"
+  },
+  "engines": {
+    "node": "8.9"
+  }
+}

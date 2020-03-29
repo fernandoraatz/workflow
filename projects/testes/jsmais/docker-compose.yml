@@ -1,0 +1,37 @@
+version: "2"
+
+services:
+  
+  server:
+    container_name: server_jsm
+    build: ./server/
+    volumes:
+      - './server/:/usr/src/app'
+    ports:
+      - "5001:5001"
+    links:
+      - mongo
+    command: nodemon server.js
+
+  client:
+    container_name: client_jsm
+    build: ./client/
+    volumes:
+      - './client/:/usr/src/app'
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+    command: npm start
+
+  mongo:
+    container_name: mongo_jsm
+    image: mongo
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - './data:/data'
+    ports:
+      - "27017:27017"
+    command: mongod --smallfiles --logpath=/dev/null

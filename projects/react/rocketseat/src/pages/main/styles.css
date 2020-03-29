@@ -1,0 +1,38 @@
+.product-list{
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.product-list article{
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.product-list .actions{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.product-list .actions button{
+    padding: 20px;
+    border-radius: 5px;
+    border: 0;
+    background: #da552f;
+    color:#fff;
+    font-size:16px;
+    font-weight: bold;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+
+.product-list .actions button[disabled]{
+    opacity: 0.3;
+    cursor: default;
+ } 
+

@@ -1,0 +1,66 @@
+/*
+|--------------------------------------------------------------------------
+| Paths
+|--------------------------------------------------------------------------
+*/
+
+$path-image:  '../images';
+$path-font:   '../fonts';
+
+/*
+|--------------------------------------------------------------------------
+| Main Container Width
+|--------------------------------------------------------------------------
+*/
+
+$main-width:  1170px; 
+
+/*
+|--------------------------------------------------------------------------
+| Colors
+|--------------------------------------------------------------------------
+*/
+
+// Background
+
+$color_bg:			 #f1f1f1;
+
+// Texts and Links
+
+$color-text:		 #555555;
+$color-title:		 #555555;
+$color-subtitle:	 #555555;
+$color-link: 		 #66afe9;
+
+// Selection
+
+$selection-bg: 	 	 #7cbbec;
+$selection-color:    #555555;
+
+
+/*
+|--------------------------------------------------------------------------
+| Fonts
+|--------------------------------------------------------------------------
+*/
+
+$font-main : 	  'Roboto', sans-serif;
+$font-regular:    'Roboto', sans-serif;
+$font-bold: 	  'Roboto', sans-serif;
+$font-light: 	  'Roboto', sans-serif;
+
+/*
+|--------------------------------------------------------------------------
+| Media Queries
+|--------------------------------------------------------------------------
+*/
+
+// Usage example:  @media #{$media-tablet}
+
+$media-desk: 		    "only screen and (max-width: 1170px)";
+$media-tablet-lg: 	    "only screen and (max-width: 960px)";
+$media-tablet: 		    "only screen and (max-width: 770px)";
+$media-mobile-lg: 	    "only screen and (max-width: 640px)";
+$media-mobile: 		    "only screen and (max-width: 480px)";
+
+

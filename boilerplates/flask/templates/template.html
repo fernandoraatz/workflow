@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+
+	<!-- Meta-Tags-->
+
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no" name="viewport" />
+
+	<!-- Styles -->
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="{{ url_for('static', filename='materialize.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Título -->
+
+	<title>Flask - Template</title>
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<nav class="grey darken-3">
+  <div class="nav-wrapper container">
+    <a href="/" class="brand-logo">Flask</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="{{ url_for('renderAdmin') }}">Add Post</a></li>
+    </ul>
+  </div>
+ </nav>
+ 
+  <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul id="messages" class="list-unstyled">
+            {% for message in messages %}
+                <li class="alert alert-success">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+  </div>
+
+
+    {% block conteudo %}{% endblock %}
+
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='materialize.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+  </body>
+</html>
